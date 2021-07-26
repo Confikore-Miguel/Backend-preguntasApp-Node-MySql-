@@ -27,6 +27,7 @@ class Server{
         //Parseo y lectura
         this.app.use( express.json() );
         //Direcctorio publico
+        this.app.use( express.static('./public'))
     }
     routes(){
         this.app.use( this.paths.auth, require('../routes/auth.routes'));
