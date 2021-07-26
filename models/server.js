@@ -28,11 +28,11 @@ class Server{
         //Parseo y lectura
         this.app.use( express.json() );
         //Direcctorio publico
-        this.app.use( express.static('./public/index.html'));
+        this.app.use( express.static('./public'));
         //Manejar rutas
-        // this.app.get('*',(req,res)=>{
-        //     res.sendFile( path.resolve(__dirname,'public/index.html'));
-        // })
+        this.app.get('*',(req,res)=>{
+            res.sendFile( path.resolve(__dirname,'public/index.html'));
+        })
     }
     routes(){
         this.app.use( this.paths.auth, require('../routes/auth.routes'));
