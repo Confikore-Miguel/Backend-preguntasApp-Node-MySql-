@@ -28,7 +28,7 @@ class Server{
         //Parseo y lectura
         this.app.use( express.json() );
         //Direcctorio publico
-        this.app.use( express.static('./public'));
+        this.app.use( express.static('./public/index.html'));
         //Manejar rutas
         this.app.get('*',(req,res)=>{
             res.sendFile( path.resolve(__dirname,'public/index.html'));
