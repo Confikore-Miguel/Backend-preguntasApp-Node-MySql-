@@ -31,7 +31,7 @@ class Server{
         this.app.use( express.static('./public'));
         //Manejar rutas
         this.app.get('*',(req,res)=>{
-            res.sendFile( path.resolve(__dirname,'public/index.html'));
+            res.sendFile( path.resolve(__dirname,'public'));
         })
     }
     routes(){
